@@ -19,18 +19,16 @@ console.log(sumLetters('d uck'));
 //20. task: Create a function that takes a list of numbers and returns the second biggest element from it
 
 function secondBiggest(lista) {
-  console.log(lista.length);
-  for (var j = 0; j < lista.length ; j++) {
-    for (var i = 0, current; i < lista.length-1; i++) {
+  for (var j = 0; j < lista.length; j++) {
+    for (var i = 0; i < lista.length-1; i++) {
       if (lista[i] > lista[i + 1]) {
-        current = lista[i + 1];
-        console.log(current);
+        var current = lista[i + 1];
         lista[i + 1] = lista[i];
         lista[i] = current;
       };
     };
-    return lista
   };
+  return lista[lista.length-2];
 };
 
 
